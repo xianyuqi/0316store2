@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_choose_image_acitivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.a0109store.ChooseImageAcitivity">
+
+    <RelativeLayout
+        android:paddingTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/btn_ChooseImage_choose"
+            android:text="选择图片"
+            android:background="#1a8ecc"
+            android:textColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btn_takephoto"
+
+            android:text="拍照"
+            android:background="#1a8ecc"
+            android:textColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_ChooseImage_choose"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="28dp" />
+
+        <ImageView
+            android:id="@+id/iv_ChooseImage_show"
+           android:src="@drawable/nopicture2"
+            android:layout_width="480dp"
+            android:layout_height="320dp"
+            android:layout_marginTop="29dp"
+            android:layout_below="@+id/btn_takephoto"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/btn_ChooseImage_OK"
+            android:text="确定"
+            android:background="#1a8ecc"
+            android:textColor="#ffffff"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_below="@+id/iv_ChooseImage_show"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+</LinearLayout>

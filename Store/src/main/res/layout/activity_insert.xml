@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_insert"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.a0109store.Insert">
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#3ba6df"
+    android:layout_height="100dp">
+    <TextView
+        android:paddingTop="50dp"
+        android:text="商品添加"
+        android:textColor="#ffffff"
+        android:textSize="32sp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>
+
+    <GridLayout
+        android:paddingTop="40dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="2">
+
+        <TableRow>
+
+            <TextView
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:text="名称："
+                android:textSize="@dimen/insert_textview_font_size" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:id="@+id/et_name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="name"
+                android:background="@drawable/edit_bg_selector"
+                android:textSize="@dimen/insert_edittext_font_size" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:text="货号："
+                android:textSize="@dimen/insert_textview_font_size" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:id="@+id/et_num"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="num"
+                android:textSize="@dimen/insert_edittext_font_size"
+                android:background="@drawable/edit_bg_selector"/>
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:text="进价："
+                android:textSize="@dimen/insert_textview_font_size" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:id="@+id/et_inprice"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="inprice"
+                android:textSize="@dimen/insert_edittext_font_size"
+                android:background="@drawable/edit_bg_selector"/>
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:text="售价："
+                android:textSize="@dimen/insert_textview_font_size" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:id="@+id/et_outprice"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="outprice"
+                android:textSize="@dimen/insert_edittext_font_size"
+                android:background="@drawable/edit_bg_selector"/>
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:text="数量："
+                android:textSize="@dimen/insert_textview_font_size" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:id="@+id/et_quantity"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="quantity"
+                android:textSize="@dimen/insert_edittext_font_size"
+                android:background="@drawable/edit_bg_selector"/>
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:text="图片路径："
+                android:textSize="@dimen/insert_textview_font_size" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:id="@+id/et_imagesrc"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="imagesrc"
+                android:textSize="@dimen/insert_edittext_font_size"
+                android:background="@drawable/edit_bg_selector"/>
+            <Button android:id="@+id/btn_insert_chooseImage"
+                android:text="选择照片"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+
+
+        <TableRow>
+
+            <TextView
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:text="备注："
+                android:textSize="@dimen/insert_textview_font_size" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:id="@+id/et_remark"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="remark"
+                android:textSize="@dimen/insert_edittext_font_size"
+                android:background="@drawable/edit_bg_selector"/>
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:text="条形码："
+                android:textSize="@dimen/insert_textview_font_size" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                android:id="@+id/et_codebar"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="codebar"
+                android:textSize="@dimen/insert_edittext_font_size"
+                android:background="@drawable/edit_bg_selector"/>
+
+            <Button
+                android:id="@+id/btn_scan"
+                android:background="@drawable/btn_scan"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"/>
+
+        </TableRow>
+
+
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/btn_insert"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#4ba6df"
+                android:textColor="#ffffff"
+                android:layout_height="wrap_content"
+                android:text="添加" />
+
+        </TableRow>
+
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#4ba6df"
+                android:textColor="#ffffff"
+                android:layout_height="wrap_content"
+                android:text="取消" />
+
+        </TableRow>
+    </GridLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.a0109store">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon1"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/appChatTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Insert"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Query"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".More"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewQueryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChooseImageAcitivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Update"
+            android:screenOrientation="portrait" />
+        <activity android:name=".zxing.activity.CaptureActivity" />
+        <activity android:name=".Info"></activity>
+    </application>
+
+</manifest>

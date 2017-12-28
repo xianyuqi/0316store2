@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">啾啾商管</string>
+    <string name="version_name">版本名称：</string>
+    <string name="can_not_find_version_name">找不到版本号</string>
+    <string name="app_info">by  xianyuqi \n 2007/3/17\n
+    applicationId "com.example.administrator.a0307store"
+     \n   minSdkVersion 19
+      \n  targetSdkVersion 23
+      \n  versionCode 3
+      \n  versionName "3.0"</string>
+</resources>

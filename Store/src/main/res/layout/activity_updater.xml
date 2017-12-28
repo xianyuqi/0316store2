@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_updater"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b271f4"
+    tools:context="com.example.administrator.a0109store.Update"
+    >
+    <LinearLayout
+        android:id="@+id/a222"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#9748e6"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:paddingTop="15dp"
+            android:text="商品信息"
+            android:textColor="#ffffff"
+            android:textSize="32sp" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sv1"
+        android:layout_below="@id/a222"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/a223"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_update_show"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/nopicture2"
+
+                />
+
+            <com.example.administrator.a0109store.ClearEditText
+                android:id="@+id/cet_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/ClearEditText_marginbottom"
+                android:layout_marginLeft="@dimen/ClearEditText_marginleft"
+                android:layout_marginRight="@dimen/ClearEditText_marginright"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_bg"
+                android:drawableLeft="@drawable/icon_name"
+                android:drawableRight="@drawable/icon_clear_normal1"
+                android:hint="货物名称"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:textColorHint="#d7d7d7"
+                android:textSize="@dimen/ClearEditText_textsize" />
+
+            <com.example.administrator.a0109store.ClearEditText
+                android:id="@+id/cet_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/ClearEditText_marginbottom"
+                android:layout_marginLeft="@dimen/ClearEditText_marginleft"
+                android:layout_marginRight="@dimen/ClearEditText_marginright"
+                android:background="@drawable/edittext_bg"
+                android:drawableLeft="@drawable/icon_num"
+                android:drawableRight="@drawable/icon_clear_normal1"
+                android:hint="货号"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:textColorHint="#d7d7d7"
+                android:textSize="@dimen/ClearEditText_textsize" />
+
+            <com.example.administrator.a0109store.ClearEditText
+                android:id="@+id/cet_inprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/ClearEditText_marginbottom"
+                android:layout_marginLeft="@dimen/ClearEditText_marginleft"
+                android:layout_marginRight="@dimen/ClearEditText_marginright"
+                android:background="@drawable/edittext_bg"
+                android:drawableLeft="@drawable/icon_inprice"
+                android:drawableRight="@drawable/icon_clear_normal1"
+                android:hint="进价"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:textColorHint="#d7d7d7"
+                android:textSize="@dimen/ClearEditText_textsize" />
+
+            <com.example.administrator.a0109store.ClearEditText
+                android:id="@+id/cet_outprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/ClearEditText_marginbottom"
+                android:layout_marginLeft="@dimen/ClearEditText_marginleft"
+                android:layout_marginRight="@dimen/ClearEditText_marginright"
+                android:background="@drawable/edittext_bg"
+                android:drawableLeft="@drawable/icon_outprice"
+                android:drawableRight="@drawable/icon_clear_normal1"
+                android:hint="售价"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:textColorHint="#d7d7d7"
+                android:textSize="@dimen/ClearEditText_textsize" />
+
+            <com.example.administrator.a0109store.ClearEditText
+                android:id="@+id/cet_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/ClearEditText_marginbottom"
+                android:layout_marginLeft="@dimen/ClearEditText_marginleft"
+                android:layout_marginRight="@dimen/ClearEditText_marginright"
+                android:background="@drawable/edittext_bg"
+                android:drawableLeft="@drawable/icon_quantity"
+                android:drawableRight="@drawable/icon_clear_normal1"
+                android:hint="数量"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:textColorHint="#d7d7d7"
+                android:textSize="@dimen/ClearEditText_textsize" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.administrator.a0109store.ClearEditText
+                    android:id="@+id/cet_imagesrc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ClearEditText_marginbottom"
+                    android:layout_marginLeft="@dimen/ClearEditText_marginleft"
+                    android:layout_marginRight="@dimen/ClearEditText_marginright"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableLeft="@drawable/icon_imagesrc"
+                    android:drawableRight="@drawable/icon_clear_normal1"
+                    android:hint="图片路径"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:textColorHint="#d7d7d7"
+                    android:textSize="@dimen/ClearEditText_textsize" />
+
+                <Button
+                    android:id="@+id/btn_update_chooseImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBaseline="@+id/cet_imagesrc"
+                    android:layout_alignBottom="@+id/cet_imagesrc"
+                    android:layout_alignEnd="@+id/cet_imagesrc"
+                    android:layout_marginEnd="47dp"
+                    android:background="@drawable/btn_imagesrc" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.administrator.a0109store.ClearEditText
+                    android:id="@+id/cet_codebar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ClearEditText_marginbottom"
+                    android:layout_marginLeft="@dimen/ClearEditText_marginleft"
+                    android:layout_marginRight="@dimen/ClearEditText_marginright"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableLeft="@drawable/icon_codebar"
+                    android:drawableRight="@drawable/icon_clear_normal1"
+                    android:hint="条形码"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:textColorHint="#d7d7d7"
+                    android:textSize="@dimen/ClearEditText_textsize" />
+
+                <Button
+                    android:id="@+id/btn_scan"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignBaseline="@+id/cet_codebar"
+
+                    android:layout_alignBottom="@+id/cet_codebar"
+                    android:layout_alignEnd="@+id/cet_codebar"
+                    android:layout_marginEnd="50dp"
+                    android:background="@drawable/btn_scan" />
+            </RelativeLayout>
+
+            <com.example.administrator.a0109store.ClearEditText
+                android:id="@+id/cet_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/ClearEditText_marginbottom"
+                android:layout_marginLeft="@dimen/ClearEditText_marginleft"
+                android:layout_marginRight="@dimen/ClearEditText_marginright"
+                android:background="@drawable/edittext_bg"
+                android:drawableLeft="@drawable/icon_remark"
+                android:drawableRight="@drawable/icon_clear_normal1"
+                android:hint="备注"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:textColorHint="#d7d7d7"
+                android:textSize="@dimen/ClearEditText_textsize" />
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#c89748e6"
+
+            android:text="修改数据"
+            android:textColor="#ffffff" />
+
+        <Button
+
+            android:id="@+id/btn_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#c89748e6"
+
+            android:text="删除数据"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</RelativeLayout>

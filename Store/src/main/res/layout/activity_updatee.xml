@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_update"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b271f4"
+    tools:context="com.example.administrator.a0109store.Update">
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9748e6"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="15dp"
+            android:text="商品信息"
+            android:textColor="#ffffff"
+            android:textSize="32sp" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sv_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll1">
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/iv_update_show"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/nopicture2"
+
+                />
+
+            <GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+
+                android:columnCount="2"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingBottom="50dp"
+                android:paddingTop="10dp"
+
+                >
+
+                <TableRow>
+
+                    <TextView
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:text="名称："
+                        android:textSize="@dimen/insert_textview_font_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_bg_selector"
+                        android:hint="name"
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:textSize="@dimen/insert_edittext_font_size" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:text="货号："
+                        android:textSize="@dimen/insert_textview_font_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/et_num"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_bg_selector"
+                        android:hint="num"
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:textSize="@dimen/insert_edittext_font_size" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:text="进价："
+                        android:textSize="@dimen/insert_textview_font_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/et_inprice"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_bg_selector"
+                        android:hint="inprice"
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:textSize="@dimen/insert_edittext_font_size" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:text="售价："
+                        android:textSize="@dimen/insert_textview_font_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/et_outprice"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_bg_selector"
+                        android:hint="outprice"
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:textSize="@dimen/insert_edittext_font_size" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:text="数量："
+                        android:textSize="@dimen/insert_textview_font_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/et_quantity"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_bg_selector"
+                        android:hint="quantity"
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:textSize="@dimen/insert_edittext_font_size" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:text="图片路径："
+                        android:textSize="@dimen/insert_textview_font_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/et_imagesrc"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_bg_selector"
+                        android:hint="imagesrc"
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:textSize="@dimen/insert_edittext_font_size" />
+
+                    <Button
+                        android:id="@+id/btn_update_chooseImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="选择照片" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:text="备注："
+                        android:textSize="@dimen/insert_textview_font_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/et_remark"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_bg_selector"
+                        android:hint="remark"
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:textSize="@dimen/insert_edittext_font_size" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:text="条形码："
+                        android:textSize="@dimen/insert_textview_font_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/et_codebar"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_bg_selector"
+                        android:hint="codebar"
+                        android:paddingTop="@dimen/insert_textviewAndEdittext_paddingTop"
+                        android:textSize="@dimen/insert_edittext_font_size" />
+
+                    <Button
+                        android:id="@+id/btn_scan"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/btn_scan" />
+                </TableRow>
+
+                <TableRow>
+
+
+                </TableRow>
+
+
+                <TableRow>
+
+
+                </TableRow>
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#c89748e6"
+
+            android:text="修改数据"
+            android:textColor="#ffffff" />
+
+        <Button
+
+            android:id="@+id/btn_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#c89748e6"
+
+            android:text="删除数据"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+
+</RelativeLayout>
