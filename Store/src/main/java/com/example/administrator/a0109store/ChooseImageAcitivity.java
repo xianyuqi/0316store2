@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,7 +39,8 @@ public class ChooseImageAcitivity extends Activity {
     private static final String SAVED_IMAGE_DIR_PATH1= "/storage/emulated/0/DCIM/Camera/";
 
     private static final int REQUEST_CODE = 1;
-
+    private Uri imageUri;
+    private File fileU;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +53,7 @@ public class ChooseImageAcitivity extends Activity {
         //上传地址到插入数据页面的imagesrc
         upload();
         //拍照
-        takePhoto();
+        takePhoto(this);
 
     }
 
@@ -92,7 +94,12 @@ public class ChooseImageAcitivity extends Activity {
         switch (requestCode) {
             case 1: {
                 if (resultCode == RESULT_OK) {
+                 //   newUri = FileProvider.getUriForFile(this, "com.example.administrator.a20171216takephoto", new File(newUri.getPath()));
                     Uri uri = data.getData();
+                   // Uri newUri = Uri.parse(PhotoUtils.getPath(this, data.getData()));
+                    if (Build.VERSION.SDK_INT >= 24) {
+                        uri = FileProvider.getUriForFile(this, "com.example.administrator.a0109store", new File(uri.getPath()));
+                    }
                     //ContentResolver cr=this.getContentResolver();
                     url = getRealFilePath(this, uri);
                    // Bitmap bitmap = BitmapFactory.decodeFile(url);
@@ -183,18 +190,18 @@ public class ChooseImageAcitivity extends Activity {
             }
         });
     }
-
-    private void takePhoto() {
+//添加Context
+    private void takePhoto(final Context context) {
         btn_takephoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getImageFromCamera();
+                getImageFromCamera(context);
 
             }
         });
     }
-
-    protected void getImageFromCamera() {
+//添加Context
+    protected void getImageFromCamera(Context context) {
         String state = Environment.getExternalStorageState();
         if (state.equals(Environment.MEDIA_MOUNTED)) {
             Intent getImageByCamera;
@@ -203,16 +210,39 @@ public class ChooseImageAcitivity extends Activity {
                  * android 6.0以上需要添加条件判断
                  * 请求权限是一个异步任务  不是立即请求就能得到结果 在结果回调中返回
                  */
+
+
+
+
                 requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 2);
                 //打开相机 前置摄像头
                 getImageByCamera = new Intent("android.media.action.IMAGE_CAPTURE");
+                if (Build.VERSION.SDK_INT >= 24) {
+                    //添加这一句表示对目标应用临时授权该Uri所代表的文件
+                    getImageByCamera.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                }
+
+
+
+
                 String out_file_path = SAVED_IMAGE_DIR_PATH1;
                 File dir = new File(out_file_path);
                 if (!dir.exists()) {
                     dir.mkdirs();
                 }
                 capturePath = SAVED_IMAGE_DIR_PATH1 + System.currentTimeMillis() + ".jpg";
-                getImageByCamera.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(capturePath)));
+                fileU=new File(capturePath);
+                imageUri= Uri.fromFile(fileU);
+                if (Build.VERSION.SDK_INT >=24) {
+                    // TODO: 2017/12/17
+                    //imageUri = FileProvider.getUriForFile(MainActivity.this, "com.example.administrator.a20171216takephoto", fileUri);
+                    imageUri = FileProvider.getUriForFile(context, "com.example.administrator.a0109store", fileU);
+                }
+
+
+
+               // getImageByCamera.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(capturePath)));
+                getImageByCamera.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
                 getImageByCamera.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
                 startActivityForResult(getImageByCamera, REQUEST_CODE_CAPTURE_CAMEIA);
             } else {
