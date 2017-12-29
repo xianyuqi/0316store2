@@ -4,60 +4,105 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:orientation="vertical"
     tools:context="com.example.administrator.a0109store.MainActivity">
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="100dp"></LinearLayout>
-    <GridLayout
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="100dp"></LinearLayout>-->
+
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_insert"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="72dp"
+
+            android:background="@drawable/sptj" />
+
+        <Button
+            android:id="@+id/btn_query"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="72dp"
+            android:background="@drawable/spgl" />
+
+        <Button
+            android:id="@+id/btn_more"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="72dp"
+            android:background="@drawable/dkf" />
+
+        <Button
+            android:id="@+id/btn_info"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="72dp"
+            android:background="@drawable/yyxx" />
+
+    </LinearLayout>
+
+    <!--<GridLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
 
 
-        android:columnCount="2">
+    <!--android:columnCount="2">-->
 
-        <TableRow>
+    <!--<TableRow>-->
 
-            <Button
-                android:id="@+id/btn_insert"
+    <!--<Button-->
+    <!--android:id="@+id/btn_insert"-->
 
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+    <!--android:layout_width="150dp"-->
+    <!--android:layout_height="150dp"-->
 
-                android:background="@drawable/insert" />
-        </TableRow>
+    <!--android:background="@drawable/insert" />-->
+    <!--</TableRow>-->
 
-        <TableRow>
+    <!--<TableRow>-->
 
-            <Button
-                android:id="@+id/btn_query"
+    <!--<Button-->
+    <!--android:id="@+id/btn_query"-->
 
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:background="@drawable/query" />
-        </TableRow>
+    <!--android:layout_width="150dp"-->
+    <!--android:layout_height="150dp"-->
+    <!--android:background="@drawable/query" />-->
+    <!--</TableRow>-->
 
-        <TableRow>
+    <!--<TableRow>-->
 
-            <Button
-                android:id="@+id/btn_more"
+    <!--<Button-->
+    <!--android:id="@+id/btn_more"-->
 
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:background="@drawable/gengduo" />
-        </TableRow>
-        <TableRow>
+    <!--android:layout_width="150dp"-->
+    <!--android:layout_height="150dp"-->
+    <!--android:background="@drawable/gengduo" />-->
+    <!--</TableRow>-->
 
-            <Button
-                android:id="@+id/btn_info"
+    <!--<TableRow>-->
 
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:background="@drawable/info" />
-        </TableRow>
+    <!--<Button-->
+    <!--android:id="@+id/btn_info"-->
+
+    <!--android:layout_width="150dp"-->
+    <!--android:layout_height="150dp"-->
+    <!--android:background="@drawable/info" />-->
+    <!--</TableRow>-->
 
 
-    </GridLayout>
+    <!--</GridLayout>-->
 
 </LinearLayout>
