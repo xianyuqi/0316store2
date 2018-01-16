@@ -57,8 +57,9 @@
                 android:id="@+id/btn_scan"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:background="@drawable/btn_scan"
+                android:background="@drawable/btn_scan1"
 
+                android:layout_alignBottom="@+id/et_query"
                 android:layout_toStartOf="@+id/btn_query" />
 
 
